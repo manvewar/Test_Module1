@@ -1,0 +1,17 @@
+function Circle(x,y,radius,color){
+this.x=x;
+this.y=y;
+this.radius=radius;
+this.color=color;
+this.render=function(canvas){
+let ctx= canvas.getContext("2d");
+ctx.fillStyle=this.color;
+ctx.beginPath();
+ctx.arc(this.x,this.y,this.radius,0,2*Math.PI);
+ctx.stroke();
+}
+}
+
+let myCanvas= document.getElementById("myCanvas"); // lấy canvas
+let circle = new Circle(10,10,100,"#000000"); // tạo đối tượng circle tọa độ x=10, y=10,radius=100 , color=#000000
+circle.render(myCanvas);
