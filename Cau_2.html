@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function tryRemoveFromArray(myArr,x){
+        for (let i = 0 ; i < myArr.length ; i++){
+            if(x === myArr[i]){
+                myArr.splice(i,1);
+                //nếu x được tìm thấy thì xóa x khỏi mảng
+            }
+        }
+        return myArr;
+    }
+
+    let myArr=[6, 4, 8, 9, 5, 7, 10];
+    let x= 6;
+    alert("Mảng trước khi xóa là: "+ myArr);
+    myArr = tryRemoveFromArray(myArr,x);
+    alert("Mảng sau khi xóa là: "+myArr);
+
+
+
+</script>
+</body>
+</html>
