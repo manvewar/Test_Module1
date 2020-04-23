@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+
+<script>
+
+    function findMax(myArray){
+        let max = 0;
+        //khởi tạo max
+
+        for (let i = 0 ; i < myArray.length ; i++) {
+            if ( max < myArray[i] ){
+                max = myArray[i];
+            }
+        }
+        return max;
+    }
+
+    let arr =[6, 4, 8, 9, 5, 7, 10];
+    let x= findMax(arr);
+    alert(" Giá trị lớn nhất cần tìm là " + x);
+
+</script>
+</body>
+
+</body>
+</html>
