@@ -7,7 +7,45 @@
 <body>
 
 <script>
+    <script>
+    function isFibonacci(inputValue){
+        let myFiboArr = makeFibonaciSeries(inputValue); // tạo mảng fibo
+        //duyệt mảng fibo
+        for (let i = 0 ; i < myFiboArr.length ; i++){
+            if(inputValue === myFiboArr[i]){
+                return true;// nếu số cần tìm nằm trong số fibo thì return true;
+            }
+        }
 
+        return false; // ngược lại return false
+    }
+
+    function makeFibonaciSeries(inputValue){
+        let fiboArr=[];
+        let i =2;
+        fiboArr[0]=1;
+        fiboArr[1]=1;
+        let checkNum;
+
+        do{
+            fiboArr[i]=fiboArr[i-1] + fiboArr[i-2];
+            checkNum= fiboArr[i];
+            i++;
+        }while(inputValue > checkNum );
+
+        return fiboArr;
+    }
+
+    let value= parseInt(prompt("Nhập số kiểm tra "));
+
+    let checkFibo= isFibonacci(value);
+
+    if(checkFibo){
+        console.log(" là số fibonaci");
+    }else{
+        console.log("không phải là số fibonaci");
+    }
+</script>
 
 
 </script>
